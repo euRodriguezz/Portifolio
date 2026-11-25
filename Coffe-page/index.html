@@ -204,6 +204,22 @@
             <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="facebook-new"/>
         </div>
     </section>
+    <script>
+    const botao = document.querySelector('#menu-toggle');
+    const menu = document.querySelector('.navbar');
+
+    botao.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+</script>
+
+    
 </body>
 
 </html>
