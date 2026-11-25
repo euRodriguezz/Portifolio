@@ -191,7 +191,6 @@ header {
     color: var(--black);
 }
 
-    
 .review .box-container .box{
     border: var(--border);
     text-align: center;
@@ -309,79 +308,6 @@ header {
         max-width: 100%;
         box-sizing: border-box;
     }
-
-    .menu-toggle {
-    display: none;
 }
-
-
-    @media (max-width: 768px) {
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        background: transparent;
-        cursor: pointer;
-        padding: 5px;
-        margin: 1rem;
-    }
-
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background: white;
-        border-radius: 3px;
-    }
-
-    .header section {
-        position: relative;
-    }
-
-    .header .navbar {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: var(--black);
-        flex-direction: column;
-        z-index: 999;
-    }
-
-    .header .navbar.active {
-        display: flex;
-    }
-
-    .header .navbar a {
-        display: block;
-        padding: 1.5rem 2rem;
-        margin: 0;
-    }
-
-        @media (max-width: 768px) {
-
-    .header section {
-            justify-content: flex-start;
-}
-
-    .header .logo {
-            margin-right: 2rem;
-}
-
-    .header .icons {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-
-.header .menu-toggle {
-    order: -1;
-    margin: 0 1.5rem 0 0;
-}
-}
-}
-
 
 
