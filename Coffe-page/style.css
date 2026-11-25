@@ -191,9 +191,6 @@ header {
     color: var(--black);
 }
 
-.menu-toggle {
-    display: none;
-}
     
 .review .box-container .box{
     border: var(--border);
@@ -313,34 +310,44 @@ header {
         box-sizing: border-box;
     }
 
-/* Somente telas pequenas */
+.menu-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     .menu-toggle {
         display: block;
-        background: none;
+        background: transparent;
         color: white;
         font-size: 3rem;
         cursor: pointer;
+        margin: 1rem;
     }
 
-    .navbar {
+    .header section {
+        position: relative;
+    }
+
+    .header .navbar {
         display: none;
-    }
-
-    .navbar.active {
-        display: flex;
-        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
+        width: 100%;
         background: var(--black);
-        padding: 1rem;
+        flex-direction: column;
+        z-index: 999;
     }
 
-    .navbar a {
-        padding: 1.5rem;
+    .header .navbar.active {
+        display: flex;
+    }
+
+    .header .navbar a {
+        padding: 1.5rem 2rem;
+        width: auto;
     }
 }
 
