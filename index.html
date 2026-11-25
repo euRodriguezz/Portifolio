@@ -2,94 +2,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caique Rodrigues | Portfólio</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caique Rodrigues | Portfólio</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      padding: 25px 8%;
-      border-bottom: 1px solid #263449;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1120;
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 18px;
+}
 
-    header h2 { color: #38bdf8; }
+header {
+  padding: 28px 8%;
+  border-bottom: 1px solid #263449;
+}
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 75px 25px;
-    }
+header h2 {
+  color: #38bdf8;
+  font-size: 27px;
+}
 
-    .hero { margin-bottom: 65px; }
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 90px 30px;
+}
 
-    .hero span { color: #38bdf8; }
+.hero {
+  margin-bottom: 90px;
+}
 
-    h1 {
-      font-size: clamp(2.3rem, 6vw, 4rem);
-      line-height: 1.15;
-      margin: 15px 0;
-    }
+.hero span {
+  color: #38bdf8;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-    p { color: #b6c3d4; }
+h1 {
+  font-size: clamp(42px, 7vw, 68px);
+  line-height: 1.15;
+  margin: 25px 0;
+  max-width: 850px;
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 25px;
-    }
+h1 strong {
+  color: #38bdf8;
+}
 
-    .skills span {
-      background: #1e293b;
-      border: 1px solid #334155;
-      padding: 8px 15px;
-      border-radius: 20px;
-      color: #7dd3fc;
-    }
+.hero p {
+  color: #cbd5e1;
+  font-size: 21px;
+  max-width: 750px;
+}
 
-    h2.section { margin-bottom: 25px; }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.skills span {
+  background: #1e293b;
+  border: 1px solid #475569;
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: #7dd3fc;
+  font-size: 17px;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border: 1px solid #334155;
-      border-radius: 12px;
-    }
+.section-title {
+  font-size: 36px;
+  margin-bottom: 35px;
+}
 
-    .card h3 { margin-bottom: 10px; }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    .card a {
-      display: inline-block;
-      margin-top: 18px;
-      color: #38bdf8;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.card {
+  background: #172337;
+  padding: 32px;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  transition: 0.2s;
+}
 
-    .card a:hover { text-decoration: underline; }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #263449;
-      color: #94a3b8;
-    }
-  </style>
+.card h3 {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #0284c7;
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background: #0369a1;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #263449;
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+@media(max-width: 600px) {
+  main {
+    padding: 55px 22px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -97,59 +162,69 @@
 </header>
 
 <main>
-  <section class="hero">
-    <span>OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO</span>
-    <h1>Desenvolvedor Web <span>em formação.</span></h1>
-    <p>
-      Sou Caique Rodrigues Lucas, estudante de tecnologia,
-      interessado em desenvolvimento web e sempre buscando
-      aprender e evoluir através de novos projetos.
-    </p>
 
-    <div class="skills">
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>JavaScript</span>
-      <span>PHP básico</span>
-      <span>TypeScript</span>
-    </div>
-  </section>
+<section class="hero">
+  <span>MEU PORTFÓLIO</span>
 
-  <section>
-    <h2 class="section">Meus projetos</h2>
+  <h1>
+    Desenvolvedor Web
+    <strong>em formação.</strong>
+  </h1>
 
-    <div class="projects">
-      <article class="card">
-        <h3>Coffee Page</h3>
-        <p>Página web desenvolvida com HTML5 e CSS3.</p>
-        <a href="./Coffe-page/">Ver projeto →</a>
-      </article>
+  <p>
+    Olá! Sou Caique Rodrigues Lucas.
+    Estou iniciando minha trajetória na área de
+    Tecnologia da Informação, desenvolvendo projetos
+    e aprimorando meus conhecimentos em programação.
+  </p>
 
-      <article class="card">
-        <h3>Projeto Android</h3>
-        <p>Projeto de desenvolvimento web.</p>
-        <a href="./projeto-android/">Ver projeto →</a>
-      </article>
+  <div class="skills">
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>PHP</span>
+    <span>TypeScript</span>
+  </div>
+</section>
 
-      <article class="card">
-        <h3>Projeto Cordel</h3>
-        <p>Projeto de página web com conteúdo literário.</p>
-        <a href="./projeto-cordel/">Ver projeto →</a>
-      </article>
+<section>
+  <h2 class="section-title">Meus projetos</h2>
 
-      <article class="card">
-        <h3>Projeto Social</h3>
-        <p>Projeto de interface utilizando HTML e CSS.</p>
-        <a href="./Projeto-Social/">Ver projeto →</a>
-      </article>
+  <div class="projects">
 
-      <article class="card">
-        <h3>Projeto Login</h3>
-        <p>Interface de tela de login.</p>
-        <a href="./Projeto-login/">Ver projeto →</a>
-      </article>
-    </div>
-  </section>
+    <article class="card">
+      <h3>Coffee Page</h3>
+      <p>Página temática desenvolvida com HTML5 e CSS3.</p>
+      <a href="./Coffe-page/">Ver projeto →</a>
+    </article>
+
+    <article class="card">
+      <h3>Projeto Android</h3>
+      <p>Projeto de desenvolvimento web utilizando HTML e CSS.</p>
+      <a href="./projeto-android/">Ver projeto →</a>
+    </article>
+
+    <article class="card">
+      <h3>Projeto Cordel</h3>
+      <p>Página web com apresentação de conteúdo literário.</p>
+      <a href="./projeto-cordel/">Ver projeto →</a>
+    </article>
+
+    <article class="card">
+      <h3>Projeto Social</h3>
+      <p>Projeto de interface desenvolvido com HTML e CSS.</p>
+      <a href="./Projeto-Social/">Ver projeto →</a>
+    </article>
+
+    <article class="card">
+      <h3>Projeto Login</h3>
+      <p>Interface de tela de login desenvolvida com CSS.</p>
+      <a href="./Projeto-login/">Ver projeto →</a>
+    </article>
+
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -159,3 +234,4 @@
 
 </body>
 </html>
+
