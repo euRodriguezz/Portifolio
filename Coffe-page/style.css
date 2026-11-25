@@ -191,6 +191,10 @@ header {
     color: var(--black);
 }
 
+.menu-toggle {
+    display: none;
+}
+    
 .review .box-container .box{
     border: var(--border);
     text-align: center;
@@ -308,5 +312,37 @@ header {
         max-width: 100%;
         box-sizing: border-box;
     }
+
+/* Somente telas pequenas */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        padding: 1rem;
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+    }
 }
+
+
 
