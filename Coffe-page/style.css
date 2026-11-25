@@ -317,26 +317,6 @@ header {
 
     @media (max-width: 768px) {
 
-         .header section {
-        justify-content: flex-start;
-    }
-
-    .menu-toggle {
-        order: 2;
-        margin-left: 1.5rem;
-        margin-right: auto;
-    }
-
-    .navbar {
-        top: 100%;
-    }
-
-    .icons {
-        margin-left: auto;
-        order: 3;
-    }
-
-
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -379,6 +359,29 @@ header {
         padding: 1.5rem 2rem;
         margin: 0;
     }
+
+        @media (max-width: 768px) {
+
+    .header section {
+        justify-content: flex-start;
+    }
+
+    .menu-toggle {
+        order: 2;
+        margin-left: 1.5rem;
+        margin-right: auto;
+    }
+
+    .navbar {
+        top: 100%;
+    }
+
+    .icons {
+        margin-left: auto;
+        order: 3;
+    }
+
+}
 }
 
 
