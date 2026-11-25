@@ -1,35 +1,122 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caique Rodrigues | Portfólio</title>
+
+<title>Caique Rodrigues | Desenvolvedor Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --bg: #08060d;
+  --surface: #110d19;
+  --surface2: #191124;
+  --purple: #a855f7;
+  --purple-light: #c084fc;
+  --text: #f5f3f7;
+  --muted: #a49aaf;
+  --border: rgba(168, 85, 247, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0b1120;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.7;
-  font-size: 18px;
+  overflow-x: hidden;
 }
+
+/* FUNDO */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: rgba(147, 51, 234, 0.13);
+  filter: blur(130px);
+  border-radius: 50%;
+  top: -180px;
+  left: -150px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: rgba(126, 34, 206, 0.10);
+  filter: blur(130px);
+  border-radius: 50%;
+  bottom: -150px;
+  right: -100px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* HEADER */
 
 header {
-  padding: 28px 8%;
-  border-bottom: 1px solid #263449;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 6, 13, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
 }
 
-header h2 {
-  color: #38bdf8;
-  font-size: 27px;
+nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav ul a:hover {
+  color: var(--purple-light);
+}
+
+/* CONTEÚDO */
 
 main {
   max-width: 1150px;
@@ -37,119 +124,323 @@ main {
   padding: 90px 30px;
 }
 
+/* HERO */
+
 .hero {
-  margin-bottom: 90px;
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 110px;
+  animation: aparecer 1s ease;
 }
 
-.hero span {
-  color: #38bdf8;
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 2px;
+.tag {
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(42px, 7vw, 68px);
-  line-height: 1.15;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.12;
   margin: 25px 0;
   max-width: 850px;
+  letter-spacing: -3px;
 }
 
 h1 strong {
-  color: #38bdf8;
+  color: var(--purple-light);
+  display: block;
+  text-shadow: 0 0 30px rgba(168, 85, 247, .25);
 }
 
 .hero p {
-  color: #cbd5e1;
-  font-size: 21px;
-  max-width: 750px;
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 650px;
 }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 13px 24px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(135deg, #9333ea, #7e22ce);
+  box-shadow: 0 0 25px rgba(147, 51, 234, .25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(147, 51, 234, .5);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--purple-light);
+}
+
+.btn-outline:hover {
+  background: rgba(168, 85, 247, .1);
+  border-color: var(--purple);
+}
+
+/* SKILLS */
 
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 32px;
+  gap: 12px;
+  margin-top: 35px;
 }
 
 .skills span {
-  background: #1e293b;
-  border: 1px solid #475569;
-  padding: 12px 20px;
+  padding: 9px 17px;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 30px;
-  color: #7dd3fc;
-  font-size: 17px;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.skills span:hover {
+  background: var(--surface2);
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(168, 85, 247, .15);
+}
+
+/* SEÇÕES */
+
+section:not(.hero) {
+  margin-bottom: 100px;
+}
+
+.section-subtitle {
+  color: var(--purple-light);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .section-title {
   font-size: 36px;
-  margin-bottom: 35px;
+  margin: 10px 0 35px;
+  letter-spacing: -1px;
 }
+
+.section-title span {
+  color: var(--purple-light);
+}
+
+/* PROJETOS */
 
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 22px;
 }
 
 .card {
-  background: #172337;
-  padding: 32px;
-  border: 1px solid #334155;
-  border-radius: 16px;
-  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #171020, #0e0a14);
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  transition: .35s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--purple);
+  filter: blur(100px);
+  opacity: 0;
+  right: -30px;
+  top: -30px;
+  transition: .35s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
+  transform: translateY(-8px);
+  border-color: var(--purple);
+  box-shadow: 0 10px 35px rgba(126, 34, 206, .13);
+}
+
+.card:hover::before {
+  opacity: .5;
+}
+
+.card-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(168, 85, 247, .12);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--purple-light);
+  font-size: 21px;
+  margin-bottom: 22px;
 }
 
 .card h3 {
-  font-size: 25px;
-  margin-bottom: 14px;
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .card p {
-  color: #cbd5e1;
-  font-size: 17px;
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 65px;
 }
 
 .card a {
   display: inline-block;
-  margin-top: 25px;
-  padding: 12px 20px;
-  background: #0284c7;
-  color: white;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: bold;
+  margin-top: 22px;
+  color: var(--purple-light);
+  font-size: 14px;
+  font-weight: 700;
   text-decoration: none;
+  transition: .3s;
 }
 
 .card a:hover {
-  background: #0369a1;
+  color: white;
+  letter-spacing: .5px;
 }
+
+/* SOBRE */
+
+.about {
+  background: linear-gradient(135deg, #171020, #0e0a14);
+  border: 1px solid var(--border);
+  padding: 35px;
+  border-radius: 16px;
+}
+
+.about p {
+  color: var(--muted);
+  max-width: 800px;
+}
+
+/* FOOTER */
 
 footer {
+  border-top: 1px solid var(--border);
   text-align: center;
   padding: 40px 20px;
-  border-top: 1px solid #263449;
-  color: #cbd5e1;
-  font-size: 17px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
-@media(max-width: 600px) {
-  main {
-    padding: 55px 22px;
+footer span {
+  color: var(--purple-light);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 650px) {
+  nav {
+    padding: 18px 22px;
   }
 
-  .hero p {
-    font-size: 19px;
+  nav ul {
+    gap: 13px;
+  }
+
+  nav ul a {
+    font-size: 11px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 65px 22px;
+  }
+
+  .hero {
+    min-height: auto;
+    margin-bottom: 85px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
   }
 
   .section-title {
-    font-size: 30px;
+    font-size: 29px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+
+@media(max-width: 380px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>
@@ -158,25 +449,46 @@ footer {
 <body>
 
 <header>
-  <h2>Caique Rodrigues</h2>
+  <nav>
+    <div class="logo">CAIQUE<span>.DEV</span></div>
+
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
 
-<section class="hero">
-  <span>MEU PORTFÓLIO</span>
+<!-- INÍCIO -->
+
+<section class="hero" id="inicio">
+
+  <span class="tag">MEU PORTFÓLIO</span>
 
   <h1>
-    Desenvolvedor Web
-    <strong>em formação.</strong>
+    Olá, eu sou Caique Rodrigues.
+    <strong>Desenvolvedor Web.</strong>
   </h1>
 
   <p>
-    Olá! Sou Caique Rodrigues Lucas.
-    Estou iniciando minha trajetória na área de
-    Tecnologia da Informação, desenvolvendo projetos
-    e aprimorando meus conhecimentos em programação.
+    Sou estudante de Tecnologia da Informação e estou
+    construindo minha trajetória no desenvolvimento web.
+    Gosto de transformar ideias em projetos e aprender
+    novas tecnologias através da prática.
   </p>
+
+  <div class="hero-buttons">
+    <a href="#projetos" class="btn btn-primary">
+      Ver meus projetos ↗
+    </a>
+
+    <a href="#sobre" class="btn btn-outline">
+      Conheça mais
+    </a>
+  </div>
 
   <div class="skills">
     <span>HTML5</span>
@@ -185,53 +497,126 @@ footer {
     <span>PHP</span>
     <span>TypeScript</span>
   </div>
+
 </section>
 
-<section>
-  <h2 class="section-title">Meus projetos</h2>
+<!-- SOBRE -->
+
+<section id="sobre" class="reveal">
+
+  <span class="section-subtitle">QUEM SOU EU</span>
+
+  <h2 class="section-title">
+    Sobre <span>mim.</span>
+  </h2>
+
+  <div class="about">
+    <p>
+      Olá! Sou Caique Rodrigues Lucas.
+      Estou iniciando minha trajetória na área de
+      Tecnologia da Informação, desenvolvendo projetos
+      e aprimorando meus conhecimentos em programação.
+      Busco evoluir constantemente, explorar novas
+      tecnologias e criar soluções cada vez melhores
+      através do desenvolvimento web.
+    </p>
+  </div>
+
+</section>
+
+<!-- PROJETOS -->
+
+<section id="projetos" class="reveal">
+
+  <span class="section-subtitle">MEU TRABALHO</span>
+
+  <h2 class="section-title">
+    Meus <span>projetos.</span>
+  </h2>
 
   <div class="projects">
 
     <article class="card">
+      <div class="card-icon">☕</div>
       <h3>Coffee Page</h3>
-      <p>Página temática desenvolvida com HTML5 e CSS3.</p>
-      <a href="./Coffe-page/">Ver projeto →</a>
+      <p>
+        Página temática desenvolvida com HTML5 e CSS3,
+        explorando estrutura e estilização web.
+      </p>
+      <a href="./Coffe-page/">Visualizar projeto ↗</a>
     </article>
 
     <article class="card">
+      <div class="card-icon">🤖</div>
       <h3>Projeto Android</h3>
-      <p>Projeto de desenvolvimento web utilizando HTML e CSS.</p>
-      <a href="./Projeto-Android/">Ver projeto →</a>
+      <p>
+        Projeto de desenvolvimento web utilizando
+        HTML e CSS.
+      </p>
+      <a href="./Projeto-Android/">Visualizar projeto ↗</a>
     </article>
 
     <article class="card">
+      <div class="card-icon">📜</div>
       <h3>Projeto Cordel</h3>
-      <p>Página web com apresentação de conteúdo literário.</p>
-      <a href="./Projeto-Cordel/">Ver projeto →</a>
+      <p>
+        Página web com apresentação de conteúdo
+        literário e recursos visuais.
+      </p>
+      <a href="./Projeto-Cordel/">Visualizar projeto ↗</a>
     </article>
 
     <article class="card">
-      <h3>Projeto Tela Login</h3>
-      <p>Projeto de interface desenvolvido com HTML e CSS.</p>
-      <a href="./Tela-login2/">Ver projeto →</a>
+      <div class="card-icon">🔐</div>
+      <h3>Tela Login</h3>
+      <p>
+        Interface de login desenvolvida com
+        HTML e CSS.
+      </p>
+      <a href="./Tela-login2/">Visualizar projeto ↗</a>
     </article>
 
     <article class="card">
-      <h3>Login Media querie</h3>
-      <p>Interface de tela de login desenvolvida com CSS.</p>
-      <a href="./Projeto-Login/">Ver projeto →</a>
+      <div class="card-icon">📱</div>
+      <h3>Login Media Queries</h3>
+      <p>
+        Interface de login com foco em
+        responsividade e CSS.
+      </p>
+      <a href="./Projeto-Login/">Visualizar projeto ↗</a>
     </article>
 
   </div>
+
 </section>
 
 </main>
 
 <footer>
-  <p>Desenvolvido por Rodrigues</p>
-  <p>GitHub: github.com/euRodriguezz</p>
+  <p>Desenvolvido por <span>Caique Rodrigues</span></p>
+  <p>GitHub: <span>github.com/euRodriguezz</span></p>
+  <p>© 2026 - Todos os direitos reservados.</p>
 </footer>
 
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach(section => {
+  observer.observe(section);
+});
+</script>
+
 </body>
+</html>
+
 </html>
 
