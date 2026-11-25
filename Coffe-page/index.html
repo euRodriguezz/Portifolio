@@ -205,17 +205,11 @@
         </div>
     </section>
     <script>
-    const botao = document.querySelector('#menu-toggle');
-    const menu = document.querySelector('.navbar');
+    const botao = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
 
-    botao.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-        });
+    botao.addEventListener('click', function () {
+        navbar.classList.toggle('active');
     });
 </script>
 
