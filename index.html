@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caique Rodrigues | Portfólio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 25px 8%;
+      border-bottom: 1px solid #263449;
+    }
+
+    header h2 { color: #38bdf8; }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 75px 25px;
+    }
+
+    .hero { margin-bottom: 65px; }
+
+    .hero span { color: #38bdf8; }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    p { color: #b6c3d4; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .skills span {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 8px 15px;
+      border-radius: 20px;
+      color: #7dd3fc;
+    }
+
+    h2.section { margin-bottom: 25px; }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border: 1px solid #334155;
+      border-radius: 12px;
+    }
+
+    .card h3 { margin-bottom: 10px; }
+
+    .card a {
+      display: inline-block;
+      margin-top: 18px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #263449;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Caique Rodrigues</h2>
+</header>
+
+<main>
+  <section class="hero">
+    <span>OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO</span>
+    <h1>Desenvolvedor Web <span>em formação.</span></h1>
+    <p>
+      Sou Caique Rodrigues Lucas, estudante de tecnologia,
+      interessado em desenvolvimento web e sempre buscando
+      aprender e evoluir através de novos projetos.
+    </p>
+
+    <div class="skills">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>PHP básico</span>
+      <span>TypeScript</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Meus projetos</h2>
+
+    <div class="projects">
+      <article class="card">
+        <h3>Coffee Page</h3>
+        <p>Página web desenvolvida com HTML5 e CSS3.</p>
+        <a href="./Coffe-page/">Ver projeto →</a>
+      </article>
+
+      <article class="card">
+        <h3>Projeto Android</h3>
+        <p>Projeto de desenvolvimento web.</p>
+        <a href="./projeto-android/">Ver projeto →</a>
+      </article>
+
+      <article class="card">
+        <h3>Projeto Cordel</h3>
+        <p>Projeto de página web com conteúdo literário.</p>
+        <a href="./projeto-cordel/">Ver projeto →</a>
+      </article>
+
+      <article class="card">
+        <h3>Projeto Social</h3>
+        <p>Projeto de interface utilizando HTML e CSS.</p>
+        <a href="./Projeto-Social/">Ver projeto →</a>
+      </article>
+
+      <article class="card">
+        <h3>Projeto Login</h3>
+        <p>Interface de tela de login.</p>
+        <a href="./Projeto-login/">Ver projeto →</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Desenvolvido por Caique Rodrigues Lucas</p>
+  <p>GitHub: github.com/euRodriguezz</p>
+</footer>
+
+</body>
+</html>
