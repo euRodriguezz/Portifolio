@@ -243,3 +243,70 @@ header {
     background-color: var(--main-color);
 }
 
+
+
+/* RESPONSIVIDADE - SEÇÃO SOBRE NÓS */
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .container-image {
+    flex: 1 1 40rem;
+    min-width: 0;
+}
+
+.about .row .container-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    min-width: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.about .row .content h3 {
+    overflow-wrap: break-word;
+}
+
+.about .row .content p {
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about .row .container-image,
+    .about .row .content {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .about .row .content {
+        padding: 2rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+
+    .about .row .btn {
+        display: inline-block;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
